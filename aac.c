@@ -143,7 +143,7 @@ memcpy(tmp+7,buf,ss);
 
 samples=NeAACDecDecode(h,&frame,tmp,ss+7);
 
-if(frame.bytesconsumed>0){
+if(samples && frame.bytesconsumed>0){
 
 if(frame.bytesconsumed>30){ // minimal size of "good" frame
 if(frame.samples>0){
